@@ -75,7 +75,7 @@ Telemetry.shared.configure(
 )
 Telemetry.shared.isEnabled = true
 
-// A MarfaError becomes an exception with fixed text.
+// A `MarfaError` named `error` becomes an exception with fixed text.
 Telemetry.shared.report(error, during: "drain")
 
 // An error of the app's own.
@@ -90,7 +90,7 @@ Telemetry.shared.log("drain_finished", level: .info, attributes: ["pending": 3, 
 await Telemetry.shared.flush()
 ```
 
-`Destination` accepts an `https` host, or an `http` host on the same machine for a test, and a project token without white space. It refuses anything else.
+`Destination` accepts an `https` host, or an `http` host on the same machine for a test, with no user name or password, and a project token without white space. It refuses anything else.
 
 Turning `isEnabled` off drops everything queued and stops a send that is under way.
 
