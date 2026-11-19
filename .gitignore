@@ -1,0 +1,9 @@
+.DS_Store
+/.build
+.swiftpm/
+xcuserdata/
+DerivedData/
+Package.resolved
+
+# Claude Code local-only (do not commit)
+.claude/
