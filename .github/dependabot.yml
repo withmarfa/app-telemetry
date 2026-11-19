@@ -12,9 +12,7 @@ updates:
     labels:
       - "dependencies"
   - package-ecosystem: "swift"
-    directories:
-      - "/"
-      - "/generator"
+    directory: "/"
     schedule:
       interval: "monthly"
     groups:
