@@ -1,6 +1,6 @@
 # app-telemetry
 
-The Swift package `WithMarfaTelemetry`: a PostHog client for WithMarfa's own apps (MAPP, Marfa Mini). Errors go out as PostHog `$exception` events and a fixed set of log events as OTLP/HTTP JSON to PostHog's logs endpoint. It has no third-party dependency, no token and no default destination, and it is inert until an app configures it (`Telemetry.shared.configure(_:)`) and turns `isEnabled` on.
+The Swift package `WithMarfaTelemetry`: a PostHog client for WithMarfa's own apps (Marfa for Mac, Marfa Mini). Errors go out as PostHog `$exception` events and a fixed set of log events as OTLP/HTTP JSON to PostHog's logs endpoint. It has no third-party dependency, no token and no default destination, and it is inert until an app configures it (`Telemetry.shared.configure(_:)`) and turns `isEnabled` on.
 
 It is not part of Marfa, and Marfa's own code carries no vendor dependency. It depends on the Marfa Swift package (`withmarfa/marfa-swift`, product `Marfa`) for `MarfaError` and `MarfaError.fixedText`, which stay there. It is not a standard that an app built on Marfa should follow, and no text here says it is.
 

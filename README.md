@@ -1,6 +1,6 @@
 # WithMarfaTelemetry
 
-WithMarfaTelemetry is a small Swift package that sends an app's errors and a fixed set of log events to a PostHog project. WithMarfa uses it in its own apps, such as MAPP and Marfa Mini.
+WithMarfaTelemetry is a small Swift package that sends an app's errors and a fixed set of log events to a PostHog project. WithMarfa uses it in its own apps, such as Marfa for Mac and Marfa Mini.
 
 This package is not part of Marfa, and Marfa does not depend on it. It isn't a standard that an app built on Marfa should follow. If you build an app on the [Marfa Swift package](https://github.com/withmarfa/marfa-swift), you can ignore this package.
 
