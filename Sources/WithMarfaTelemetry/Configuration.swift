@@ -57,7 +57,7 @@ extension Telemetry {
 
         /// - Parameters:
         ///   - destination: Where to send.
-        ///   - serviceName: The app's name, such as `mapp`. It is fixed in the source, so no value read at run time
+        ///   - serviceName: The app's name, such as `marfa-mac`. It is fixed in the source, so no value read at run time
         ///     can become it.
         ///   - serviceVersion: The app's build version.
         public init(destination: Destination, serviceName: StaticString, serviceVersion: String) {

@@ -53,7 +53,7 @@ func configured(
 ) throws -> Telemetry {
     let telemetry = Telemetry(transport: recorder, interval: interval, now: { clock.now })
     telemetry.configure(
-        .init(destination: try destination(), serviceName: "mapp", serviceVersion: "1.2.3"))
+        .init(destination: try destination(), serviceName: "marfa-mac", serviceVersion: "1.2.3"))
     telemetry.isEnabled = enabled
     return telemetry
 }

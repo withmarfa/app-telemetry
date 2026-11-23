@@ -27,9 +27,9 @@ struct Reports {
         let properties = try #require(event["properties"] as? [String: Any])
         #expect(properties["$process_person_profile"] as? Bool == false)
         #expect(properties["$geoip_disable"] as? Bool == true)
-        #expect(properties["$lib"] as? String == "mapp")
+        #expect(properties["$lib"] as? String == "marfa-mac")
         #expect(properties["$lib_version"] as? String == "1.2.3")
-        #expect(properties["service.name"] as? String == "mapp")
+        #expect(properties["service.name"] as? String == "marfa-mac")
         #expect(properties["service.version"] as? String == "1.2.3")
         #expect(properties["service.instance.id"] == nil)
         #expect(properties["dropped_since_last"] as? Int == 0)
@@ -191,7 +191,7 @@ struct Loops {
         telemetry.isEnabled = false
         telemetry.isEnabled = true
         telemetry.report(type: "loop", sentence: "again", during: "drain")
-        telemetry.configure(.init(destination: try destination(), serviceName: "mapp", serviceVersion: "1.2.3"))
+        telemetry.configure(.init(destination: try destination(), serviceName: "marfa-mac", serviceVersion: "1.2.3"))
         telemetry.report(type: "loop", sentence: "again", during: "drain")
         await telemetry.flush()
         #expect(try sent(recorder).count == 1)
@@ -290,7 +290,7 @@ struct Logs {
             uniqueKeysWithValues: attributes.compactMap { item in
                 (item["key"] as? String).map { ($0, (item["value"] as? [String: Any])?["stringValue"] as? String) }
             })
-        #expect(named["service.name"] == "mapp")
+        #expect(named["service.name"] == "marfa-mac")
         #expect(named["service.version"] == "1.2.3")
         #expect(named["service.instance.id"] == nil)
         #expect(named["os.type"] == "darwin")
