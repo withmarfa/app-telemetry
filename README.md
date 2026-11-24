@@ -45,12 +45,12 @@ Add the package to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/withmarfa/app-telemetry", from: "0.0.1")
+    .package(url: "https://github.com/withmarfa/app-telemetry-swift", from: "0.0.1")
 ],
 targets: [
     .target(
         name: "MyApp",
-        dependencies: [.product(name: "WithMarfaTelemetry", package: "app-telemetry")]
+        dependencies: [.product(name: "WithMarfaTelemetry", package: "app-telemetry-swift")]
     )
 ]
 ```
